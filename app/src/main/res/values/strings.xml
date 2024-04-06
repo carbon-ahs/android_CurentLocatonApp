@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CurentLocatonApp</string>
+    <string name="welcome_tv_text">Welcome,\n<b>Ahsan Habib</b></string>
+    <string name="sync_time_tv_text">Pls sync...</string>
+    <string name="address_tv_text">Pls sync...</string>
+    <string name="coordinate_tv_text">Pls sync...</string>
 </resources>

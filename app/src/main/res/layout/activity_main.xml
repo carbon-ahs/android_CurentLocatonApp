@@ -7,13 +7,99 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
+        android:id="@+id/welcomeTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/welcome_tv_text"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coordinateTv"
+        style="@style/tv_dflt_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/coordinate_tv_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/addressTv"
+        app:layout_constraintTop_toBottomOf="@+id/addressTv" />
+
+    <TextView
+        android:id="@+id/addressTv"
+        style="@style/tv_dflt_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="@string/address_tv_text"
+        app:layout_constraintBottom_toTopOf="@+id/coordinateTv"
+        app:layout_constraintStart_toStartOf="@+id/syncTimeTv"
+        app:layout_constraintTop_toBottomOf="@+id/syncTimeTv" />
+
+    <TextView
+        android:id="@+id/syncTimeTv"
+        style="@style/tv_dflt_style"
+        android:layout_margin="0dp"
+        android:text="@string/sync_time_tv_text"
+        app:layout_constraintBottom_toTopOf="@+id/addressTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/syncBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Sync"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/addressTv"
+        app:layout_constraintEnd_toStartOf="@+id/syncTimeTv"
+        app:layout_constraintHorizontal_bias="0.693"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_access_time_24" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/coordinateTv"
+        app:layout_constraintEnd_toStartOf="@+id/coordinateTv"
+        app:layout_constraintHorizontal_bias="0.693"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_location_pin_24" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/coordinateTv"
+        app:layout_constraintEnd_toStartOf="@+id/addressTv"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_other_houses_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
